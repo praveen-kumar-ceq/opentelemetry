@@ -1,0 +1,11 @@
+service: nodejs-lambda-2
+frameworkVersion: "3"
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  environment:
+    NODE_OPTIONS: --require lambda-wrapper
+functions:
+  lambda-otel-test:
+    handler: handler.hello
